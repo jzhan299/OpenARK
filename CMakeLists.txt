@@ -93,6 +93,7 @@ if( PCL_FOUND )
 endif( PCL_FOUND )
 
 # require OpenCV
+SET("OpenCV_DIR" "C:/Program Files/opencv/build/install")
 find_package( OpenCV REQUIRED )
 if( OpenCV_FOUND )
    message( STATUS "Found OpenCV: ${OpenCV_INCLUDE_DIRS}" )
@@ -174,7 +175,6 @@ if( USE_RSSDK2 )
   endif( realsense2_FOUND )
 endif( USE_RSSDK2 )
 
-MESSAGE(${realsense2_FOUND})
 set( RSSDK_FOUND OFF )
 if( USE_RSSDK OR NOT realsense2_FOUND )
   find_package( RSSDK )
